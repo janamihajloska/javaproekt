@@ -1,0 +1,39 @@
+<nav>START PAGE
+ <ul>
+ <li><a href="#Welcome"> WELCOME</a></li>
+ <li><a href="#Favorites"> FAVORITES</a></li>
+ <li><a href="#Photos"> PHOTOS</a></li>
+ <li><a href="#Blog"> BLOG</a></li>
+ <li><a href="#Questionnaire">QUESTIONNAIRE</a></li>
+ <li><a href="#Contact"> CONTACT</a></li>
+ </ul>
+ </nav>
+
+
+  body { font-family:initial;
+        font-weight:800;
+        background-color:rgb(58, 58, 58);
+        background-image: url(jana/gry.jpg);
+             }
+
+             nav ul li:hover {background-color: rgb(207, 207, 207);}
+nav ul li a{text-decoration: none;
+color: black;
+}
+
+ol li {
+    color:black;
+    border:rgb(241, 53, 125);
+    background-color:rgb(209, 123, 166);
+    width:7em;
+}
+ol li a {
+    color:black
+}
+.ulist {
+    color:black;
+    border:rgb(241, 53, 125);
+    background-color:rgb(209, 123, 166);
+    width:7em;
+
+}

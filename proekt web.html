@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset = "utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>
+JM
+</title>
+
+ <style type = "text/css">
+
+    
+ h1 {
+     font-weight: bolder;
+     color: black;
+     
+ }
+ 
+.blogbox{
+    color:black;
+    border:gray;
+    background-color: rgb(141, 141, 141);
+    border-width:thick;
+
+
+}
+.blogbox2
+{
+    background-color: rgb(151, 69, 101);
+}
+.blogbox3{
+    background-color: salmon;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.button{
+    font-weight: normal;
+    border-radius: 10px;
+    border-style:double;
+    background-color: rgb(233, 196, 210);
+    border-color: rgb(241, 53, 125);
+
+}
+.comment{
+    font-weight: normal;
+    border-style:double;
+    background-color: rgb(213, 203, 248);
+    border-color: rgb(0, 0, 0);
+}
+
+ol li a {
+    color:black
+}
+
+.blog{
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgb(116, 216, 216);
+    border-style: hidden;
+    width: 10em;
+    height:1.5em;
+    text-align:left;
+    ;
+}
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column1 {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+.fontsize{
+    font-size: 2em;
+}
+.textstroke{
+    color:rgb(241, 53, 125);
+    -webkit-text-stroke: 1px black;
+    font-size: 1.5em;
+}
+.inline{
+    display: inline;
+    margin: 0;
+}
+.zoom:hover {
+  transform: scale(1.2);
+}
+  * {box-sizing: border-box}
+
+
+body, html {
+  height: 220%;
+  margin: 0;
+  font-family: initial;
+  font-weight: 800;
+  color: black;
+  
+}
+
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 32px 16px;
+  font-size: 17px;
+  width: 16.5%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+.komentari{
+    width: 200px;
+  border: 2px solid black;
+  background-color:rosybrown;
+  height: 40px;
+  margin: 0px;
+
+  outline-style:groove;
+}
+
+
+
+
+#Welcome {background-image: url(jana/gry.jpg);}
+#Favorites {background-color:rgb(241, 53, 125);}
+#Photos {background-color: rosybrown;}
+#Blog {background-color: rgb(233, 196, 210)};
+#Questionnaire {background-color: rgb(151, 69, 101);}
+#Contact {background-color: lightblue;}
+
+
+
+
+ </style>
+
+ <script src="skript.js"></script>
+ <script src="comment.js"></script>
+ <script src="pic.js"></script>
+ <script src="menu.js"></script>
+ <script src="blog.js"></script>
+ <script src="submitted.js"></script>
+
+
+ </head>
+ <body>
+
+<button id="defaultOpen" class="tablink" onclick="openPage('Welcome', this, 'rosybrown')" id="defaultopen">Welcome</button>
+<button class="tablink" onclick="openPage('Favorites', this, 'rgb(241, 53, 125)')" >Favorites</button>
+<button class="tablink" onclick="openPage('Photos', this, ' rosybrown')">Photos</button>
+<button class="tablink" onclick="openPage('Blog', this, 'rgb(233, 196, 210)')">Blog</button>
+<button class="tablink" onclick="openPage('Questionnaire', this, 'rosybrown')">Questionnaire</button>
+<button class="tablink" onclick="openPage('Contact', this, 'lightblue')">Contact</button>
+
+
+ <div id="Welcome" class="tabcontent">
+ <h1 >Hello</h1>
+ <p class="textstroke">
+ My name is Jana Mihajloska.<br>I'm 21 years old.I live in Ohrid but I study<br> electrical engineering in Skopje.
+</p>
+</div>
+
+
+<div id="Favorites" class="tabcontent">
+<h1 > Favorites</h1>
+<ul>
+    <li class="fontsize">Traveling</li>
+
+    <p>My favorite cities :</p>
+    <ul>
+        <li>Barcelona</li>
+        <li>Belgrade</li>
+        <li>Vienna</li>
+    </ul>
+    <p><div>
+        <div class="row1">
+            <div class="column1">
+                <a href="https://theculturetrip.com/europe/spain/articles/20-must-visit-attractions-in-barcelona/">
+                <img src="jana/barcelona.jpg" alt="Barcelona" width="200" height="200"></a>
+                <a href="https://theculturetrip.com/europe/serbia/articles/10-must-visit-attractions-in-belgrade-serbia/">
+                <img src="jana/belgrad.jpg" alt="Belgrade" width="200" height="200"></a>
+                <a href="https://www.tripadvisor.in/Attractions-g190454-Activities-Vienna.html">
+                <img src="jana/vienna.jpg" alt="Vienna" width="200" height="200"></a>
+            </div>
+
+    </div>
+    <p>P.S. You can click on each photo to discover must see places in Barcelona,Belgrade and Vienna</p>
+    </div>
+</p>
+<p class="blogbox blogbox2">My recommendations for Barcelona:</p>
+<ul class="button">
+    <li>Must visit: La Sagrada Familia,Park Güell,Montjuic,Port Vell,La Boqueria</li>
+    <li>Coffee and food: Negro,Feroz,Cecconi's,Eatmytrip,El Arbol brunch </li>
+    <li>Rooftops: The Barcelona EDITION,W Barcelona,Majestic hotel and spa,Basilica de la Sagrada Familia</li>
+    <li>Nightlife: Opium Nightclub,Moog,Pacha,Sutton </li>
+</ul>
+
+<p class="blogbox blogbox2">My recommendations for Belgrade:</p>
+<ul class="button">
+    <li>Must visit: Kalemegdan,Knez Mihajlova,Skadarlija,Nikola Tesla museaum</li>
+    <li>Coffee and food: Kafeterija Kralja Petra,La Boutique,Tri Sesira,Komunale</li>
+    <li>Rooftops: Mama's Shelter,Sky Lounge Belgrade</li>
+    <li>Nightlife: Freestyler,Kasina by community,Gotik</li>
+</ul>
+
+<p class="blogbox blogbox2">My recommendations for Vienna:</p>
+<ul class="button">
+    <li>Must visit: Schonbrunn Palace,The Hofburg,Belvedere Palace,<br>Stephansplatz,Museum Der Illusionen,Volksgarten</li>
+    <li>Coffee and food: Motto am Fluss,Gerstner,Le Bol,Cavallo,</li>
+    <li>Rooftops: Sky bar Vienna,Ruby Marie Hotel and Bar,</li>
+    <li>Nightlife: Flex,Donau,Cream Lounge Club,Scotch Club,</li>
+</ul>
+
+
+    <p>On my bucket list:</p>
+    <ul>
+        <li>Paris</li>
+        <li>Lugano</li>
+        <li>London</li>
+        <li>Istanbul</li>
+    </ul>
+
+    <p><div>
+        <div class="row1">
+            <div class="column1">
+                <img id="paris" src="jana/paris.jpg" alt="Paris" width="200" height="200">
+                <img id="lugano" src="jana/lugano.jpg" alt="Lugano width="200" height="200">
+                <img id="london" src="jana/london.jpg" alt="London" width="200" height="200">
+                <img id="istanbul" src="jana/istanbul.jpg" alt="Istanbul" width="200" height="200">
+
+            </div>
+
+    </div></p>
+    
+        <p>Here are some useful pages for travelling:</p>
+        <ol>
+            <li><a href = "https://www.booking.com/">Booking</a></li>
+            <li><a href = "https://www.airbnb.com/">Airbnb</a></li>
+            <li><a href = "https://wizzair.com/#/">Wizzair</a></li>
+            <li><a href = "https://www.skyscanner.net/">Sky scanner</a></li>
+    
+            
+        </ol>
+
+    <p><li class="fontsize">Shopping</li>
+    <p>Here are some useful pages for shopping <br> where you can also order online:</p>
+    <ol>
+        <li><a href = "http://www.ebay.com/">EBAY</a></li>
+        <li><a href = "https://www.farfetch.com/mk/">Farfetch</a></li>
+        <li><a href = "https://www.zara.com/mk/">Zara</a></li>
+        <li><a href = "https://www.fashiongroup.com.mk/">Fashion Group</a></li>
+    </ol>
+    
+    <p><li class="fontsize">Fun</li></p>
+<p>What I like to do for fun:</p>
+    <ul>
+        <li>Go Hiking in the mountains</li>
+        <li>Go to the cinema</li>
+        <li>Go clubbing</li>
+        <li>Shoping</li>
+        <li>Listen to music</li>
+        <li>Have coffee with friends</li>
+
+    </ul>
+</div></div>
+
+<div id="Photos" class="tabcontent" >
+
+ <h1>Photos</h1>
+
+ <div class="row">
+ <div class="column">
+ <img src="/jana/jana (2).JPG" class="zoom" alt="JanaM" width="300" height="400">
+ <form  action="#">
+    <p>
+        <input id="likebutton1" class="button" type="button" value="Like" onclick="myFunction1" ></p>
+        <div id="output1"></div>
+    <label>Comments:</label>
+   <input id="text1" class="comment" type="text" maxlength="70" size=15 >
+   <p>
+       <input id="c1" class="button" type="button" value="Post">
+       <input class="button" type="reset" value="Clear">
+       <div class="komentari" id="komentar1"></div>
+       <p id="time1"></p>
+
+   </p>
+   
+</form></div>
+<div class="column">
+ <img src="/jana/jana (3).JPG" class="zoom" alt="JanaM" width="300" height="400">
+ <form method="POST" action="#">
+     <p>
+    <input id="likebutton2" class="button" type="button" value="Like" onclick="myFunction2"></p>
+    <div id="output2"></div>
+    <label>Comments:</label>
+   <input id="text2" class="comment" type="text" maxlength="70" size=15 >
+   <p>
+       <input id="c2" class="button" type="button" value="Post">
+       <input class="button" type="reset" value="Clear">
+       <p class="komentari" id="komentar2"></p>
+       <p id="time2"></p>
+
+   </p>
+   
+</form></div>
+ </div>
+ <div class="row">
+<div class="column">
+ <img src="/jana/jana (4).JPG" class="zoom" alt="JanaM" width="300" height="400">
+ <form method="POST" action="#">
+    <p>
+        <input id="likebutton3" class="button" type="button" value="Like" onclick="myFunction3"></p>
+        <div id="output3"></div>
+    <label>Comments:</label>
+   <input id="text3" class="comment" type="text" maxlength="70" size=15 >
+   <p>
+       <input id="c3" class="button" type="button" value="Post">
+       <input class="button" type="reset" value="Clear">
+       <p class="komentari"  id="komentar3"></p>
+       <p id="time3"></p>
+
+   </p>
+
+
+ 
+</form></div>
+<div class="column">
+ <img src="/jana/jana (5).JPG" class="zoom" alt="JanaM" width="300" height="400">
+ <form method="POST" action="">
+    <p>
+        <input id="likebutton4" class="button" type="button" value="Like " onclick="myFunction4"></p>
+        <div id="output4"></div>
+     <label>Comments:</label>
+    <input id="text4" class="comment" type="text" maxlength="70" size=15 >
+    <p>
+        <input id="c4" class="button" type="button" value="Post">
+        <input class="button" type="reset" value="Clear">
+        <p class="komentari" id="komentar4"></p>
+       <p id="time4"></p>
+
+    </p>
+</p>
+    
+ </form></div>
+ </div>
+ <div class="row">
+ <div class="column">
+ <img src="/jana/jana (6).JPG" class="zoom" alt="JanaM" width="300" height="400">
+ <form method="POST" action="">
+    <p>
+        <input id="likebutton5" class="button" type="button" value="Like" onclick="myFunction5"></p>
+        <div id="output5"></div>
+    <label>Comments:</label>
+   <input id="text5" class="comment" type="text" maxlength="70" size=15 >
+   <p>
+       <input id="c5" class="button" type="button" value="Post">
+       
+       <input class="button" type="reset" value="Clear">
+       <p class="komentari" id="komentar5"></p>
+       <p id="time5"></p>
+
+   </p>
+   
+</form></div>
+<div class="column">
+ <img src="/jana/jana (7).JPG" class="zoom" alt="JanaM" width="300" height="400">
+ <form method="POST" action="">
+    <p>
+        <input id="likebutton6" class="button" type="button" value="Like" onclick="myFunction6"></p>
+        <div id="output6"></div>
+    <label>Comments:</label>
+   <input id="text6" class="comment" type="text" maxlength="70" size=15 >
+   <p>
+       <input id="c6" class="button" type="button" value="Post">
+       <input class="button" type="reset" value="Clear">
+       <p class="komentari"id="komentar6"></p>
+       <p id="time6"></p>
+
+   </p>
+   
+</form></div>
+ </div>
+<form>
+    <label>Upload photos:</label>
+    <p><input class="button" type="file" ></p>
+    <input class="button" type="submit" value="Post">
+    
+</form>
+</div></div>
+
+
+
+<div id="Blog" class="tabcontent">
+<h1>Blog</h1>
+ <p>Your opinion on travelling:</p>
+ <form>
+    <textarea id="bt1" class="blogbox" maxlength="500" rows="10" cols="100"> 
+    </textarea>
+    <p><input class="button" type="date"> <input id="b1" class="button" type="button" value="Submit"></p>
+
+
+ </form>
+<p id="blogtext1"></p>
+<p id="datum1"></p>
+
+ <p>Your opinion on shopping:</p>
+ <form>
+    <textarea id="bt2" class="blogbox blogbox2" maxlength="500" rows="10" cols="100"> 
+    </textarea>
+    <p><input class="button" type="date"> <input id="b2" class="button" type="button" value="Submit"></p>
+ </form>
+ <p id="blogtext2"></p>
+ <p id="datum2"></p>
+ <p>Your opinion on fun:</p>
+ <form>
+    <textarea id="bt3" class="blogbox blogbox2 blogbox3" maxlength="500" rows="10" cols="100"> 
+    </textarea>
+    <p><input class="button" type="date"> <input id="b3"  type="button" class="button" value="Submit" name="Submit"></p>
+ </form>
+ <p id="blogtext3"></p>
+ <p id="datum3"></p>
+ <p class="blog">Other blog options:</p>
+ <form>
+     <select class="blog" name="Blog">
+    <option value="Health">Health</option>
+    <option value="Love">Love</option>
+    <option value="Food">Food</option>
+    <option value="Sport">Sport</option>
+    <option value="Music" selected>Music</option>
+    <option value="Movies">Movies</option>
+    <option value="Fashion">Fashion</option>
+</select>
+ </form>
+
+ <p><form>
+    <textarea class="blogbox" maxlength="500" rows="10" cols="100"> 
+    </textarea>
+    <p><input class="button" type="date"> <input class="button" type="submit" name="Post"></p>
+ </form></p>
+</div>
+
+<div id="Questionnaire" class="tabcontent">
+<h1 >Questionnaire</h1>
+<p>Tell me about your experience on my website: <img src="jana/like.png" alt="like" width="20" height="20"></p>
+
+<form onsubmit="Submitted()">
+    <p><label>Name: </label>
+    <input id="username" class="comment" type="text"></p>
+    <p><label>Surname:</label>
+    <input class="comment" type="text"></p>
+    <p><label>Email:</label>
+    <input class="comment" type="email" placeholder="user@hotmail.com">
+    <p><label>How would you rate my website?</label>
+    <input type="range" step="1" min="1" max='10'></p>
+
+    <p><label>Things you liked:</label></p>
+    <input type="checkbox"  >
+    <label>Site design</label>
+    <input type="checkbox" >
+    <label>Usefulness</label>
+    <input type="checkbox" >
+    <label>Images</label>
+    <input type="checkbox" >
+    <label>Ease of use</label>
+
+    <p><label>What would you like to see next on my page:</label></p>
+    <input type="checkbox">
+    <label>Music</label>
+    <input type="checkbox">
+    <label>More blog options</label>
+    <input type="checkbox">
+    <label>Ask me questions</label>
+    <input type="checkbox">
+    <label>More travelling advice</label>
+    
+    
+    <p><label>Insert your comment here:</label></p>
+    <textarea class="blogbox blogbox2" rows="10" cols="80" maxlength="300"></textarea>
+
+    <p><input type="submit" name="Submit"></p>
+
+ </form>
+</div>
+<div id="Contact" class="tabcontent">
+ <h1>Contact</h1>
+ <p>Jana Mihajloska</p>
+ <p>Telephone number: <strong>076 852 963</strong></p>
+ <p>Social media:</p>
+ <ul>
+     <li class="inline"> <a href="https://www.instagram.com/jmihajloska/"> <img src="jana/instagram.png" alt="instagramlogo" height="50" width="50"></a></li>
+     <li class="inline"> <a href="https://mk-mk.facebook.com/jana.mihajloska.7"><img src="jana/facebook.png" alt="facebooklogo" height="50" width="50"></a></li>
+     <li class="inline"> <a href="https://account.microsoft.com/?lang=en-US&refd=account.live.com&refp=landing"><img src="jana/outlook1.webp" alt="outlooklogo" width="50" height="50"></a></li>
+ </ul>
+
+</div>
+
+ 
+
+ </body>
+ </html>
