@@ -24,9 +24,6 @@ function Komentar1()
 {
    
     
-    var x1 = document.getElementById("text1").value;
-    document.getElementById("komentar1").innerHTML= x1;
-    
     var current = new Date()
     document.getElementById("time1").innerHTML=
     "<p> " + current.getMonth()+ "." 
@@ -37,8 +34,7 @@ function Komentar1()
 }
 function Komentar2()
 {
-    var x2 = document.getElementById("text2").value;
-    document.getElementById("komentar2").innerHTML= x2;
+
     
     var current = new Date()
     document.getElementById("time2").innerHTML=
@@ -50,8 +46,7 @@ function Komentar2()
 }
 function Komentar3()
 {
-    var x3 = document.getElementById("text3").value;
-    document.getElementById("komentar3").innerHTML= x3;
+  
     
     var current = new Date()
     document.getElementById("time3").innerHTML=
@@ -63,8 +58,7 @@ function Komentar3()
 }
 function Komentar4()
 {
-    var x4 = document.getElementById("text4").value;
-    document.getElementById("komentar4").innerHTML= x4;
+    
     
     var current = new Date()
     document.getElementById("time4").innerHTML=
@@ -76,8 +70,7 @@ function Komentar4()
 }
 function Komentar5()
 {
-    var x5 = document.getElementById("text5").value;
-    document.getElementById("komentar5").innerHTML= x5;
+    
     
     var current = new Date()
     document.getElementById("time5").innerHTML=
@@ -89,8 +82,7 @@ function Komentar5()
 }
 function Komentar6()
 {
-    var x6 = document.getElementById("text6").value;
-    document.getElementById("komentar6").innerHTML= x6;
+    
     
     var current = new Date()
     document.getElementById("time6").innerHTML=

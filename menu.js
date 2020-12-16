@@ -1,6 +1,6 @@
 
 function openPage(pageName,elmnt,color) {
-  document.getElementById("defaultOpen").click();
+  document.getElementById("defaultopen").click();
   var i, tabcontent, tablinks;
   
   tabcontent = document.getElementsByClassName("tabcontent");

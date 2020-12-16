@@ -3,6 +3,9 @@
  <head>
  <meta charset = "utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ 
+ 
  <title>
 JM
 </title>
@@ -151,6 +154,36 @@ body, html {
 
   outline-style:groove;
 }
+.box1{
+    border-left :5px solid hotpink ;
+    
+}
+.box2{
+    border-left :5px solid aqua ;
+    
+}
+.box3{
+    border-left :5px solid lime ;
+    
+}
+.box4{
+    border-left :5px solid black ;
+    
+}
+.box5{
+    border-left :5px solid  crimson;
+    
+}
+.box6{
+    border-left :5px solid indigo ;
+    
+}
+
+
+
+
+
+
 
 
 
@@ -168,17 +201,18 @@ body, html {
  </style>
 
  <script src="skript.js"></script>
- <script src="comment.js"></script>
+<script src="comment.js"></script>
  <script src="pic.js"></script>
  <script src="menu.js"></script>
  <script src="blog.js"></script>
  <script src="submitted.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
  </head>
- <body>
+ <body onload="document.getElementById('defaultopen').click();">
 
-<button id="defaultOpen" class="tablink" onclick="openPage('Welcome', this, 'rosybrown')" id="defaultopen">Welcome</button>
+<button id="defaultopen" class="tablink" onclick="openPage('Welcome', this, 'rosybrown')" id="defaultopen">Welcome</button>
 <button class="tablink" onclick="openPage('Favorites', this, 'rgb(241, 53, 125)')" >Favorites</button>
 <button class="tablink" onclick="openPage('Photos', this, ' rosybrown')">Photos</button>
 <button class="tablink" onclick="openPage('Blog', this, 'rgb(233, 196, 210)')">Blog</button>
@@ -187,20 +221,66 @@ body, html {
 
 
  <div id="Welcome" class="tabcontent">
- <h1 >Hello</h1>
+    <p> <img src="jana/jm.jpg" width="200" height="200" id="logo">
+        <script> 
+            $(document).ready(function(){
+              $("#logo").mouseenter(function(){
+                var div = $("#logo");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+              });
+            });
+            </script>
+ <h1 >Hello</h1></p>
+ 
+
+
  <p class="textstroke">
  My name is Jana Mihajloska.<br>I'm 21 years old.I live in Ohrid but I study<br> electrical engineering in Skopje.
 </p>
+<h1>What can you find on this website:</h1>
+<section class="wrap">
+   
+<ul id="list">
+    <li class="in">Favorites</li>
+    <ul class="in">
+        <li>Travel</li>
+    <li class="in">Shopping</li>
+    <li class="in">Fun</li></ul>
+    <li class="in">Photos</li>
+    <li class="in">Blog</li>
+    <li class="in">Contact</li>
+
+    
+  </ul>
+     </section>
+     
+ 
+ 
+   
 </div>
 
 
 <div id="Favorites" class="tabcontent">
-<h1 > Favorites</h1>
+    <label>Search:</label><input placeholder="Type in something" type="text" id="myInput">
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("ul,li,ol,p").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
+<h1> Favorites</h1>
 <ul>
     <li class="fontsize">Traveling</li>
 
     <p>My favorite cities :</p>
-    <ul>
+    <ul id="content">
         <li>Barcelona</li>
         <li>Belgrade</li>
         <li>Vienna</li>
@@ -221,7 +301,7 @@ body, html {
     </div>
 </p>
 <p class="blogbox blogbox2">My recommendations for Barcelona:</p>
-<ul class="button">
+<ul id="content" class="button">
     <li>Must visit: La Sagrada Familia,Park Güell,Montjuic,Port Vell,La Boqueria</li>
     <li>Coffee and food: Negro,Feroz,Cecconi's,Eatmytrip,El Arbol brunch </li>
     <li>Rooftops: The Barcelona EDITION,W Barcelona,Majestic hotel and spa,Basilica de la Sagrada Familia</li>
@@ -229,7 +309,7 @@ body, html {
 </ul>
 
 <p class="blogbox blogbox2">My recommendations for Belgrade:</p>
-<ul class="button">
+<ul id="content" class="button">
     <li>Must visit: Kalemegdan,Knez Mihajlova,Skadarlija,Nikola Tesla museaum</li>
     <li>Coffee and food: Kafeterija Kralja Petra,La Boutique,Tri Sesira,Komunale</li>
     <li>Rooftops: Mama's Shelter,Sky Lounge Belgrade</li>
@@ -237,7 +317,7 @@ body, html {
 </ul>
 
 <p class="blogbox blogbox2">My recommendations for Vienna:</p>
-<ul class="button">
+<ul id="content" class="button">
     <li>Must visit: Schonbrunn Palace,The Hofburg,Belvedere Palace,<br>Stephansplatz,Museum Der Illusionen,Volksgarten</li>
     <li>Coffee and food: Motto am Fluss,Gerstner,Le Bol,Cavallo,</li>
     <li>Rooftops: Sky bar Vienna,Ruby Marie Hotel and Bar,</li>
@@ -246,7 +326,7 @@ body, html {
 
 
     <p>On my bucket list:</p>
-    <ul>
+    <ul id="content">
         <li>Paris</li>
         <li>Lugano</li>
         <li>London</li>
@@ -266,7 +346,7 @@ body, html {
     </div></p>
     
         <p>Here are some useful pages for travelling:</p>
-        <ol>
+        <ol id="content">
             <li><a href = "https://www.booking.com/">Booking</a></li>
             <li><a href = "https://www.airbnb.com/">Airbnb</a></li>
             <li><a href = "https://wizzair.com/#/">Wizzair</a></li>
@@ -277,25 +357,29 @@ body, html {
 
     <p><li class="fontsize">Shopping</li>
     <p>Here are some useful pages for shopping <br> where you can also order online:</p>
-    <ol>
+    <ol id="content" >
         <li><a href = "http://www.ebay.com/">EBAY</a></li>
         <li><a href = "https://www.farfetch.com/mk/">Farfetch</a></li>
         <li><a href = "https://www.zara.com/mk/">Zara</a></li>
         <li><a href = "https://www.fashiongroup.com.mk/">Fashion Group</a></li>
     </ol>
     
+   
     <p><li class="fontsize">Fun</li></p>
 <p>What I like to do for fun:</p>
-    <ul>
+    <ul id="content">
         <li>Go Hiking in the mountains</li>
         <li>Go to the cinema</li>
         <li>Go clubbing</li>
         <li>Shoping</li>
-        <li>Listen to music</li>
+        <li id="">Listen to music</li>
         <li>Have coffee with friends</li>
 
     </ul>
+   
 </div></div>
+
+
 
 <div id="Photos" class="tabcontent" >
 
@@ -305,16 +389,42 @@ body, html {
  <div class="column">
  <img src="/jana/jana (2).JPG" class="zoom" alt="JanaM" width="300" height="400">
  <form  action="#">
-    <p>
-        <input id="likebutton1" class="button" type="button" value="Like" onclick="myFunction1" ></p>
-        <div id="output1"></div>
+    <p><input id="like-Unlike1" class="button" type="button" value="Like"  ></p>
+        
+
+        <script>
+           $("#like-Unlike1").click( function changeBtnText()
+           {
+               if ($(this).attr("value") == 'Like')
+               {
+            $(this).attr('value', 'Unlike'); }
+            else
+            $(this).attr('value','Like')
+                    })
+        
+            </script>
+
+
+
     <label>Comments:</label>
-   <input id="text1" class="comment" type="text" maxlength="70" size=15 >
+   <input id="text1" class="comment" type="textarea" maxlength="70" size=15 >
    <p>
        <input id="c1" class="button" type="button" value="Post">
        <input class="button" type="reset" value="Clear">
-       <div class="komentari" id="komentar1"></div>
+       
+       <ul class="box1">
+           
+       </ul>
        <p id="time1"></p>
+      <script>
+           $("#c1").click( function comment()
+           {
+             var output = $("#text1").val();
+               $(".box1").append("<br>"+output);
+               
+
+           } ); </script>
+       
 
    </p>
    
@@ -323,15 +433,36 @@ body, html {
  <img src="/jana/jana (3).JPG" class="zoom" alt="JanaM" width="300" height="400">
  <form method="POST" action="#">
      <p>
-    <input id="likebutton2" class="button" type="button" value="Like" onclick="myFunction2"></p>
-    <div id="output2"></div>
+    <input id="like-Unlike2" class="button" type="button" value="Like" ></p>
+    <script>
+        $("#like-Unlike2").click( function changeBtnText()
+        {
+            if ($(this).attr("value") == 'Like')
+            {
+         $(this).attr('value', 'Unlike'); }
+         else
+         $(this).attr('value','Like')
+                 })
+     
+         </script>
+    
+    
     <label>Comments:</label>
    <input id="text2" class="comment" type="text" maxlength="70" size=15 >
    <p>
-       <input id="c2" class="button" type="button" value="Post">
+       <input  id="c2" class="button" type="button" value="Post">
        <input class="button" type="reset" value="Clear">
-       <p class="komentari" id="komentar2"></p>
+       <ul class="box2"></ul>
        <p id="time2"></p>
+       <script>
+        $("#c2").click( function comment()
+        {
+            
+          var output = $("#text2").val();
+            $(".box2").append("<br>"+output);
+            
+
+        } ); </script>
 
    </p>
    
@@ -342,15 +473,34 @@ body, html {
  <img src="/jana/jana (4).JPG" class="zoom" alt="JanaM" width="300" height="400">
  <form method="POST" action="#">
     <p>
-        <input id="likebutton3" class="button" type="button" value="Like" onclick="myFunction3"></p>
-        <div id="output3"></div>
+        <input id="like-Unlike3" class="button" type="button" value="Like" ></p>
+        <script>
+            $("#like-Unlike3").click( function changeBtnText()
+            {
+                if ($(this).attr("value") == 'Like')
+                {
+             $(this).attr('value', 'Unlike'); }
+             else
+             $(this).attr('value','Like')
+                     })
+         
+             </script>
+        
     <label>Comments:</label>
    <input id="text3" class="comment" type="text" maxlength="70" size=15 >
    <p>
        <input id="c3" class="button" type="button" value="Post">
        <input class="button" type="reset" value="Clear">
-       <p class="komentari"  id="komentar3"></p>
+       <ul class="box3"></ul>
        <p id="time3"></p>
+       <script>
+            $("#c3").click( function comment()
+            {
+              var output = $("#text3").val();
+                $(".box3").append("<br>"+output);
+                
+ 
+            } ); </script>
 
    </p>
 
@@ -361,15 +511,35 @@ body, html {
  <img src="/jana/jana (5).JPG" class="zoom" alt="JanaM" width="300" height="400">
  <form method="POST" action="">
     <p>
-        <input id="likebutton4" class="button" type="button" value="Like " onclick="myFunction4"></p>
-        <div id="output4"></div>
+        <input id="like-Unlike4" class="button" type="button" value="Like " ></p>
+        <script>
+            $("#like-Unlike4").click( function changeBtnText()
+            {
+                if ($(this).attr("value") == 'Like')
+                {
+             $(this).attr('value', 'Unlike'); }
+             else
+             $(this).attr('value','Like')
+                     })
+         
+             </script>
      <label>Comments:</label>
     <input id="text4" class="comment" type="text" maxlength="70" size=15 >
     <p>
         <input id="c4" class="button" type="button" value="Post">
         <input class="button" type="reset" value="Clear">
-        <p class="komentari" id="komentar4"></p>
+        <ul class="box4"></ul>
        <p id="time4"></p>
+       <script>
+            $("#c4").click( function comment()
+            {
+              var output = $("#text4").val();
+              
+                $(".box4").append("<br>"+output);
+                
+                
+ 
+            } ); </script>
 
     </p>
 </p>
@@ -381,16 +551,34 @@ body, html {
  <img src="/jana/jana (6).JPG" class="zoom" alt="JanaM" width="300" height="400">
  <form method="POST" action="">
     <p>
-        <input id="likebutton5" class="button" type="button" value="Like" onclick="myFunction5"></p>
-        <div id="output5"></div>
+        <input id="like-Unlike5" class="button" type="button" value="Like" ></p>
+        <script>
+            $("#like-Unlike5").click( function changeBtnText()
+            {
+                if ($(this).attr("value") == 'Like')
+                {
+             $(this).attr('value', 'Unlike'); }
+             else
+             $(this).attr('value','Like')
+                     })
+         
+             </script>
     <label>Comments:</label>
    <input id="text5" class="comment" type="text" maxlength="70" size=15 >
    <p>
        <input id="c5" class="button" type="button" value="Post">
        
        <input class="button" type="reset" value="Clear">
-       <p class="komentari" id="komentar5"></p>
+       <ul class="box5"></ul>
        <p id="time5"></p>
+       <script>
+            $("#c5").click( function comment()
+            {
+              var output = $("#text5").val();
+                $(".box5").append("<br>"+output);
+                
+ 
+            } ); </script>
 
    </p>
    
@@ -399,26 +587,39 @@ body, html {
  <img src="/jana/jana (7).JPG" class="zoom" alt="JanaM" width="300" height="400">
  <form method="POST" action="">
     <p>
-        <input id="likebutton6" class="button" type="button" value="Like" onclick="myFunction6"></p>
-        <div id="output6"></div>
+        <input id="like-Unlike6" class="button" type="button" value="Like" ></p>
+        <script>
+            $("#like-Unlike6").click( function changeBtnText()
+            {
+                if ($(this).attr("value") == 'Like')
+                {
+             $(this).attr('value', 'Unlike'); }
+             else
+             $(this).attr('value','Like')
+                     })
+         
+             </script>
     <label>Comments:</label>
    <input id="text6" class="comment" type="text" maxlength="70" size=15 >
    <p>
        <input id="c6" class="button" type="button" value="Post">
        <input class="button" type="reset" value="Clear">
-       <p class="komentari"id="komentar6"></p>
+       <ul class="box6"></ul>
        <p id="time6"></p>
+       <script>
+            $("#c6").click( function comment()
+            {
+              var output = $("#text6").val();
+                $(".box6").append("<br>"+output);
+                
+ 
+            } ); </script>
 
    </p>
    
 </form></div>
  </div>
-<form>
-    <label>Upload photos:</label>
-    <p><input class="button" type="file" ></p>
-    <input class="button" type="submit" value="Post">
-    
-</form>
+
 </div></div>
 
 
@@ -516,14 +717,19 @@ body, html {
 </div>
 <div id="Contact" class="tabcontent">
  <h1>Contact</h1>
+
  <p>Jana Mihajloska</p>
  <p>Telephone number: <strong>076 852 963</strong></p>
  <p>Social media:</p>
  <ul>
      <li class="inline"> <a href="https://www.instagram.com/jmihajloska/"> <img src="jana/instagram.png" alt="instagramlogo" height="50" width="50"></a></li>
-     <li class="inline"> <a href="https://mk-mk.facebook.com/jana.mihajloska.7"><img src="jana/facebook.png" alt="facebooklogo" height="50" width="50"></a></li>
-     <li class="inline"> <a href="https://account.microsoft.com/?lang=en-US&refd=account.live.com&refp=landing"><img src="jana/outlook1.webp" alt="outlooklogo" width="50" height="50"></a></li>
+     <li class="inline"> <a href="https://www.facebook.com/jana.mihajloska/"><img src="jana/facebook.png" alt="facebooklogo" height="50" width="50"></a></li>
+     <li class="inline"> <a href="mailto:janush_18@hotmail.com"><img src="jana/outlook1.webp" alt="outlooklogo" width="50" height="50"></a></li>
  </ul>
+
+
+
+   
 
 </div>
 
